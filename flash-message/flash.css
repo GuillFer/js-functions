@@ -1,0 +1,41 @@
+#flash {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  margin: 16px;
+  padding: 8px;
+}
+
+#flash.visible {
+  display: block;
+  animation-name: fadeOut;
+}
+
+#flash[data-type="danger"] {
+  background-color: #F2929A;
+  color: #721c24;
+}
+
+#flash[data-type="warn"] {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+#flash[data-type="info"] {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.99;
+  }
+  to {
+    opacity: 0;
+  }
+}
