@@ -1,3 +1,3 @@
 # js-functions
 
-Library of generic js functions I made for various projects
+Library of generic js functions
