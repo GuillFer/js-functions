@@ -28,3 +28,20 @@ const minValue = (a, returnValue = 'value') => {
   }
 
 }
+
+// Array sort function with order
+Array.prototype.sortBy = function (property, order = 'ASC') {
+  const sorted = this.sort((a, b) => {
+    if (a[property] < b[property]) {
+      if (order == 'DESC') return 1;
+      return -1;
+    }
+    if (a[property] > b[property]) {
+      if (order == 'DESC') return -1;
+      return 1;
+    }
+    return 0;
+  });
+
+  return sorted;
+}
